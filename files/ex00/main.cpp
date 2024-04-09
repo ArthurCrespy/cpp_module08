@@ -13,20 +13,21 @@
 #include "easyfind.h"
 
 #include <vector>
+// #include <array>
 #include <list>
 
 int main(void)
 {
-	std::array<int, 5> arr = {1, 2, 3, 4, 5};
-	try
-	{
-		int it = easyfind(arr, 4);
-		std::cout << "Value 4 found at index " << it << " in array.\n";
-	}
-	catch (const std::exception &e)
-	{
-		std::cerr << "Exception caught: " << e.what() << std::endl;
-	}
+//	std::array<int, 5> arr = {1, 2, 3, 4, 5};
+//	try
+//	{
+//		int it = easyfind(arr, 4);
+//		std::cout << "Value 4 found at index " << it << " in array.\n";
+//	}
+//	catch (const std::exception &e)
+//	{
+//		std::cerr << "Exception caught: " << e.what() << std::endl;
+//	}
 
 	std::vector<int> vec;
 	vec.push_back(1);
