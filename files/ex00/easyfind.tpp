@@ -20,11 +20,11 @@ static int easyfind(T &container, int value)
 
 	it = std::find(container.begin(), container.end(), value);
 	if (it == container.end())
-		throw easyfind::NotFoundException();
+		throw NotFoundException();
 	return (*it);
 }
 
-const char* easyfind::NotFoundException::what() const throw()
+const char* NotFoundException::what() const throw()
 {
 	return ("Error: value not found");
 }
