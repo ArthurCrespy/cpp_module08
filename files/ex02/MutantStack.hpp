@@ -19,9 +19,9 @@ template <typename T>
 class MutantStack : public std::stack<T>
 {
 	public:
-		MutantStack();
+		MutantStack(void);
 		MutantStack(MutantStack const &src);
-		~MutantStack();
+		~MutantStack(void);
 
 		MutantStack &operator=(MutantStack const &rhs);
 
