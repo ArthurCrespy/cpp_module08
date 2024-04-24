@@ -32,6 +32,13 @@ int main(void)
 	try
 	{
 		sp2.shortestSpan();
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	try
+	{
 		sp2.longestSpan();
 	}
 	catch (std::exception &e)
