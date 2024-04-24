@@ -43,28 +43,33 @@ void Span::addNumber(int nb)
 	_size++;
 }
 
-int Span::shortestSpan(void)
+size_t Span::shortestSpan(void)
 {
-	int min;
+	size_t min;
+	std::vector<int> array_tmp;
 
 	if (_size <= 1)
 		throw Span::SpanShort();
-	std::sort(_array.begin(), _array.end());
-	min = _array[1] - _array[0];
+	array_tmp = _array;
+	std::sort(array_tmp.begin(), array_tmp.end());
+	min = array_tmp[1] - array_tmp[0];
 	for (unsigned int i = 1; i < _size - 1; i++)
 	{
-		if (_array[i + 1] - _array[i] < min)
-			min = _array[i + 1] - _array[i];
+		if (array_tmp[i + 1] - array_tmp[i] < (int)min)
+			min = array_tmp[i + 1] - array_tmp[i];
 	}
 	return (min);
 }
 
-int Span::longestSpan(void)
+size_t Span::longestSpan(void)
 {
+	std::vector<int> array_tmp;
+
 	if (_size <= 1)
 		throw Span::SpanShort();
-	std::sort(_array.begin(), _array.end());
-	return _array[_size - 1] - _array[0];
+	array_tmp = _array;
+	std::sort(array_tmp.begin(), array_tmp.end());
+	return (array_tmp[_size - 1] - array_tmp[0]);
 }
 
 void Span::fillArray(void)

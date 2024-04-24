@@ -33,10 +33,10 @@ class Span
 
 		Span &operator=(Span const &rhs);
 
-		void	addNumber(int nb);
-		int		shortestSpan(void);
-		int		longestSpan(void);
-		void	fillArray(void);
+		void		addNumber(int nb);
+		size_t		shortestSpan(void);
+		size_t		longestSpan(void);
+		void		fillArray(void);
 
 		class SpanFull : public std::exception
 		{
