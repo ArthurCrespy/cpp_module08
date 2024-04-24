@@ -61,5 +61,16 @@ int main(void)
 		std::cerr << "Exception caught: " << e.what() << std::endl;
 	}
 
+	std::list<int> lst1;
+	try
+	{
+		int it = easyfind(lst1, 42);
+		std::cout << "Value 42 found at index " << it << " in list.\n";
+	}
+	catch (const std::exception &e)
+	{
+		std::cerr << "Exception caught: " << e.what() << std::endl;
+	}
+
 	return (0);
 }
