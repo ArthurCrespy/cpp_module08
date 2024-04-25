@@ -27,6 +27,7 @@ class Span
 		std::vector<int>	_array;
 
 	public:
+		Span(void);
 		Span(unsigned int N);
 		Span(Span const &src);
 		~Span(void);

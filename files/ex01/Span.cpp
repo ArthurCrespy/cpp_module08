@@ -12,6 +12,8 @@
 
 #include "Span.hpp"
 
+Span::Span(void) : _N(0), _size(0) {}
+
 Span::Span(unsigned int N) : _N(N), _size(0)
 {
 	_array.reserve(N);
